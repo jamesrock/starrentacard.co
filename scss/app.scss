@@ -18,7 +18,7 @@
 	background-color: white;
 	box-sizing: border-box;
 	transition: all 0.5s;
-	transform-origin: 0 0;
+	transform-origin: 50% 50%;
 
 	&-value {
 		position: absolute;
@@ -34,6 +34,28 @@
 
 	&.red {
 		color: red;
+	}
+
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 10px;
+	text-align: center;
+
+	button {
+		background-color: salmon;
+		padding: 10px 20px;
+		display: inline-block;
+		border: 0;
+		color: white;
+		width: 100%;
+		max-width: 400px;
+		cursor: pointer;
+		font-size: 30px;
 	}
 
 }
