@@ -41,6 +41,10 @@ body {
   .card.black {
     color: #222; }
 
+#table {
+  height: calc(100vh - 50px);
+  position: relative; }
+
 footer {
   position: fixed;
   bottom: 0;
