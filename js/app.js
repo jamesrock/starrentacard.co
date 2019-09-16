@@ -91,12 +91,12 @@ Card = ROCK.Object.extend({
 		return `${this.value}${this.suit}`;
 
 	},
-	getDisplayName: function() {
+	getDisplayName: function(side) {
 
 		var
 		icon = suitIcons[this.suit];
 
-		return `<div class="card-value"><div class="card-value-value">${this.value}</div><div class="card-value-icon">${icon}</div></div>`;
+		return `<div class="card-value ${side}"><div class="card-value-value">${this.value}</div><div class="card-value-icon">${icon}</div></div>`;
 
 	},
 	getColour: function() {
@@ -112,12 +112,16 @@ Card = ROCK.Object.extend({
 	toHTML: function() {
 
 		var
-		node = document.createElement('div');
+		node = document.createElement('div'),
+		html = '';
 
-		node.innerHTML = this.getDisplayName();
+		html += this.getDisplayName('top');
+		html += this.getDisplayName('bottom');
 
-		node.classList.add('card');
-		node.classList.add(this.getColour());
+		node.innerHTML = html;
+
+		node.classList.add(`card`);
+		node.classList.add(`${this.getColour()}`);
 
 		return node;
 
@@ -133,7 +137,7 @@ deal = function() {
 
 	var
 	card = $(cards[ROCK.MATH.random(0, (cards.length-1))].toHTML()),
-	rotation = ROCK.MATH.random(-10, 10);
+	rotation = ROCK.MATH.random(-12, 12);
 
 	card.css({
 		'transform': 'scale(2.5) translate(0%, 0%) rotate(-10deg)',
@@ -152,8 +156,9 @@ deal = function() {
 	}, 100);
 
 },
-$table = $('#table'),
-$deal = $('#deal').on('click', function() {
+$table = $('#table');
+
+$('#deal').on('click', function() {
 
 	deal();
 
