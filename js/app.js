@@ -128,6 +128,6 @@ sorters = {
 		return this.position;
 	})
 },
-cards = makeDeck();
+cards = shuffle([].concat(makeDeck()));
 
 $('body').append(cards[0].toHTML());
