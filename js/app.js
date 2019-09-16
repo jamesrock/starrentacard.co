@@ -141,7 +141,7 @@ deal = function() {
 
 	card.css({
 		'transform': 'scale(2.5) translate(0%, 0%) rotate(-10deg)',
-		'box-shadow': '0 10px 20px rgba(0, 0, 0, 0.8)',
+		'box-shadow': '0 20px 20px rgba(0, 0, 0, 0.8)',
 		'transform-origin': '40px 70px'
 	});
 
@@ -151,7 +151,7 @@ deal = function() {
 
 		card.css({
 			'transform': `scale(1) translate(-50%, -50%) rotate(${rotation}deg)`,
-			'box-shadow': '0 0 0 rgba(0, 0, 0, 0.5)',
+			'box-shadow': '0 0 0 rgba(0, 0, 0, 0.8)',
 			'transform-origin': '50% 50%'
 		});
 
