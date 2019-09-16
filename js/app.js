@@ -175,6 +175,10 @@ $('#deal').on('click', function() {
 	deal();
 	return false;
 
+}).on('dblclick', function() {
+
+	return false;
+
 });
 
 deal();
