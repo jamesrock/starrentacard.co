@@ -173,6 +173,7 @@ $table = $('#table');
 $('#deal').on('click', function() {
 
 	deal();
+	return false;
 
 });
 
