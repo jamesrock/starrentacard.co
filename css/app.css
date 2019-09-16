@@ -63,4 +63,5 @@ footer {
     cursor: pointer;
     font-size: 30px;
     border-radius: 4px;
-    font-family: inherit; }
+    font-family: inherit;
+    touch-action: manipulation; }
