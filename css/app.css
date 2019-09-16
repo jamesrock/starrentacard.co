@@ -1,3 +1,36 @@
 * {
   padding: 0;
   margin: 0; }
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 350px;
+  font-size: 150px;
+  padding: 5px; }
+  .card-value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    text-align: center;
+    width: 30px;
+    letter-spacing: -1px;
+    margin-left: -1px;
+    line-height: 1; }
+  .card.red {
+    color: red; }
+
+.card {
+  font-size: 22px;
+  font-weight: bold;
+  border: solid 1px black;
+  text-align: left;
+  border-radius: 5px;
+  background-color: white;
+  padding: 5px 0;
+  box-sizing: border-box; }
