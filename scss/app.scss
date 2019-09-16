@@ -3,6 +3,11 @@
 	margin: 0;
 }
 
+html,
+body {
+	height: 100%;
+}
+
 body {
 	font-family: sans-serif;
 }
@@ -56,7 +61,7 @@ body {
 }
 
 #table {
-	height: calc(100vh - 50px);
+	height: calc(100% - 50px);
 	position: relative;
 }
 
