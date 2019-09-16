@@ -130,4 +130,22 @@ sorters = {
 },
 cards = shuffle([].concat(makeDeck()));
 
-$('body').append(cards[0].toHTML());
+card = $(cards[0].toHTML());
+
+card.css({
+	'transform': 'scale(2) translate(-50%, -50%)',
+	'box-shadow': '0 10px 20px rgba(0, 0, 0, 0.8)',
+	'top': '150%'
+});
+
+$('body').append(card);
+
+setTimeout(function() {
+
+	card.css({
+		'transform': 'scale(1) translate(-50%, -50%)',
+		'box-shadow': '0 0 0 rgba(0, 0, 0, 0.5)',
+		'top': '50%'
+	});
+
+}, 100);

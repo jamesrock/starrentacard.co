@@ -10,7 +10,6 @@
 	transform: translate(-50%, -50%);
 	width: 250px;
 	height: 350px;
-	padding: 5px;
 	font-size: 60px;
 	font-weight: bold;
 	border: solid 1px black;
@@ -18,6 +17,8 @@
 	border-radius: 5px;
 	background-color: white;
 	box-sizing: border-box;
+	transition: all 0.5s;
+	transform-origin: 0 0;
 
 	&-value {
 		position: absolute;
@@ -30,7 +31,9 @@
 		line-height: 1;
 		text-align: center;
 	}
+
 	&.red {
 		color: red;
 	}
+
 }
