@@ -17,7 +17,7 @@ body {
   transform: translate(-50%, -50%);
   width: 250px;
   height: 350px;
-  border: solid 1.5px #333;
+  border: solid 2px #333;
   border-radius: 15px;
   background-color: white;
   box-sizing: border-box;
