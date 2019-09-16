@@ -137,10 +137,12 @@ deal = function() {
 
 	var
 	card = $(cards[ROCK.MATH.random(0, (cards.length-1))].toHTML()),
-	rotation = ROCK.MATH.random(-12, 12);
+	rotation = ROCK.MATH.random(-12, 12),
+	translateX = ROCK.MATH.random(-12, 12),
+	translateY = ROCK.MATH.random(-12, 12);
 
 	card.css({
-		'transform': 'scale(2.5) translate(0%, 0%) rotate(-10deg)',
+		'transform': 'scale(2.5) translate(0px, 0px) rotate(-10deg)',
 		'box-shadow': '0 20px 20px rgba(0, 0, 0, 0.8)',
 		'transform-origin': '40px 70px'
 	});
@@ -150,7 +152,7 @@ deal = function() {
 	setTimeout(function() {
 
 		card.css({
-			'transform': `scale(1) translate(-50%, -50%) rotate(${rotation}deg)`,
+			'transform': `scale(1) translate(calc(-50% + ${translateX}px), calc(-50% + ${translateY}px)) rotate(${rotation}deg)`,
 			'box-shadow': '0 0 0 rgba(0, 0, 0, 0.8)',
 			'transform-origin': '50% 50%'
 		});
