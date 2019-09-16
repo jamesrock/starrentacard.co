@@ -132,14 +132,22 @@ sorters = {
 		return this.position;
 	})
 },
-cards = shuffle([].concat(makeDeck())),
+cards = [],
 deal = function() {
 
+	if(cards.length<1) {
+		$table.empty();
+		cards = shuffle([].concat(makeDeck()));
+	};
+
 	var
-	card = $(cards[ROCK.MATH.random(0, (cards.length-1))].toHTML()),
+	index = ROCK.MATH.random(0, (cards.length-1)),
+	card = $(cards[index].toHTML()),
 	rotation = ROCK.MATH.random(-12, 12),
 	translateX = ROCK.MATH.random(-12, 12),
 	translateY = ROCK.MATH.random(-12, 12);
+
+	cards.splice(index, 1);
 
 	card.css({
 		'transform': 'scale(2.5) translate(0px, 0px) rotate(-10deg)',
