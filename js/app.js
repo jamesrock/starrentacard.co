@@ -142,8 +142,11 @@ $('body').append(card);
 
 setTimeout(function() {
 
+	var
+	rotation = ROCK.MATH.random(-10, 10);
+
 	card.css({
-		'transform': 'scale(1) translate(-50%, -50%)',
+		'transform': `scale(1) translate(-50%, -50%) rotate(${rotation}deg)`,
 		'box-shadow': '0 0 0 rgba(0, 0, 0, 0.5)',
 		'top': '50%'
 	});
