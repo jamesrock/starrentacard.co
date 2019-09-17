@@ -177,4 +177,4 @@ $('#deal').on('click', function() {
 
 });
 
-deal();
+// deal();
