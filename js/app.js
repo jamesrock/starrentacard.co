@@ -151,7 +151,7 @@ deal = function() {
 		cards = makeDeck();
 	};
 
-	// console.log(cards.length);
+	console.log(cards.length);
 
 	var
 	card = $(getCard().toHTML()),
