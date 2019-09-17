@@ -186,3 +186,13 @@ $('#deal, #table').on('click', function() {
 	return false;
 
 });
+
+$(document).on('keypress', function(e) {
+
+	if(e.keyCode===32) {
+		deal();
+	};
+
+	return false;
+
+});
