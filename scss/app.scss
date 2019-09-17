@@ -62,10 +62,17 @@ body {
 
 }
 
+.table-cloth {
+	height: 100%;
+	box-sizing: border-box;
+	padding-bottom: 75px;
+	position: relative;
+	overflow: hidden;
+}
+
 #table {
 	height: 100%;
 	position: relative;
-	top: -30px;
 	touch-action: manipulation;
 }
 
