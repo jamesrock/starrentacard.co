@@ -11,13 +11,15 @@ makeDeck = function() {
 	maxValue = 13,
 	maxSuit = 4;
 
+	positions = makePositions();
+
 	for(var suit=0;suit<maxSuit;suit++) {
 		for(var value=0;value<maxValue;value++) {
 			out.push(new Card(suits[suit], values[value], getPosition()));
 		};
 	};
 
-	return out;
+	return shuffle(out);
 
 },
 getPosition = function() {
@@ -25,6 +27,15 @@ getPosition = function() {
 	var
 	index = ROCK.MATH.random(0, (positions.length-1)),
 	out = positions.splice(index, 1)[0];
+
+	return out;
+
+},
+getCard = function() {
+
+	var
+	index = ROCK.MATH.random(0, (cards.length-1)),
+	out = cards.splice(index, 1)[0];
 
 	return out;
 
@@ -42,7 +53,7 @@ makePositions = function() {
 	return out;
 
 },
-positions = makePositions(),
+positions = [],
 values = [
 	'A',
 	'2',
@@ -137,17 +148,14 @@ deal = function() {
 
 	if(cards.length<1) {
 		$table.empty();
-		cards = shuffle([].concat(makeDeck()));
+		cards = makeDeck();
 	};
 
 	var
-	index = ROCK.MATH.random(0, (cards.length-1)),
-	card = $(cards[index].toHTML()),
+	card = $(getCard().toHTML()),
 	rotation = ROCK.MATH.random(-12, 12),
 	translateX = ROCK.MATH.random(-12, 12),
 	translateY = ROCK.MATH.random(-12, 12);
-
-	cards.splice(index, 1);
 
 	card.css({
 		'transform': 'scale(2.5) translate(0px, 0px) rotate(-10deg)',
@@ -170,11 +178,9 @@ deal = function() {
 },
 $table = $('#table');
 
-$('#deal').on('click', function() {
+$('#deal, #table').on('click', function() {
 
 	deal();
 	return false;
 
 });
-
-// deal();
