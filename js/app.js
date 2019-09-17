@@ -151,6 +151,8 @@ deal = function() {
 		cards = makeDeck();
 	};
 
+	console.log(cards.length);
+
 	var
 	card = $(getCard().toHTML()),
 	rotation = ROCK.MATH.random(-12, 12),

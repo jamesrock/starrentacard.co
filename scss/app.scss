@@ -1,6 +1,11 @@
 * {
 	padding: 0;
 	margin: 0;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 html,
@@ -60,6 +65,8 @@ body {
 #table {
 	height: calc(100% - 50px);
 	position: relative;
+	overflow: hidden;
+	touch-action: manipulation;
 }
 
 footer {
@@ -83,6 +90,9 @@ footer {
 		border-radius: 4px;
 		font-family: inherit;
 		touch-action: manipulation;
+		&:active {
+			transform: scale(0.95);
+		}
 	}
 
 }
