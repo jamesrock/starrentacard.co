@@ -90,9 +90,6 @@ footer {
 		border-radius: 4px;
 		font-family: inherit;
 		touch-action: manipulation;
-		&:active {
-			transform: scale(0.95);
-		}
 	}
 
 }
