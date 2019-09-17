@@ -7,13 +7,15 @@
   -ms-user-select: none;
   user-select: none; }
 
+html {
+  background-color: aliceblue; }
+
 html,
 body {
   height: 100%; }
 
 body {
-  font-family: sans-serif;
-  background-color: aliceblue; }
+  font-family: sans-serif; }
 
 .card {
   position: absolute;

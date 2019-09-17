@@ -8,6 +8,10 @@
 	user-select: none;
 }
 
+html {
+	background-color: aliceblue;
+}
+
 html,
 body {
 	height: 100%;
@@ -15,7 +19,6 @@ body {
 
 body {
 	font-family: sans-serif;
-	background-color: aliceblue;
 }
 
 .card {
