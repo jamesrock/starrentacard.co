@@ -4,7 +4,7 @@
   "description": "star-rent-a-card",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass --watch scss/app.scss css/app.css --style=compressed",
+    "sass": "node-sass --watch sass/app.scss dist/starrentacard.css --style=compressed",
     "webpack": "webpack --watch"
   },
   "repository": {
