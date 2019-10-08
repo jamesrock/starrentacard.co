@@ -34,8 +34,7 @@ getPosition = function() {
 getCard = function() {
 
 	var
-	index = ROCK.MATH.random(0, (cards.length-1)),
-	out = cards.splice(index, 1)[0];
+	out = cards.splice(0, 1)[0];
 
 	return out;
 
